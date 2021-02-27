@@ -2,10 +2,9 @@
 
 namespace Database\Seeders;
 
-use App\Models\Piece;
 use Illuminate\Database\Seeder;
 
-class PieceSeeder extends Seeder
+class ComposerSeeder extends Seeder
 {
     /**
      * Run the database seeds.
@@ -14,6 +13,6 @@ class PieceSeeder extends Seeder
      */
     public function run()
     {
-        Piece::factory()->count(15)->create();
+        //
     }
 }

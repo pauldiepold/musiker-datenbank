@@ -4,7 +4,7 @@ use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
 
-class CreatePiecesTable extends Migration
+class CreateComposersTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,10 +13,12 @@ class CreatePiecesTable extends Migration
      */
     public function up()
     {
-        Schema::create('pieces', function (Blueprint $table) {
+        Schema::create('composers', function (Blueprint $table) {
             $table->id();
-            $table->string('name')->nullable();
-            $table->foreignId('composer_id')->constrained();
+            $table->string('name');
+            $table->string('genre');
+            $table->string('year_of_birth')->nullable();
+            $table->string('year_of_death')->nullable();
             $table->timestamps();
             $table->softDeletes();
         });
@@ -29,6 +31,6 @@ class CreatePiecesTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('pieces');
+        Schema::dropIfExists('composers');
     }
 }

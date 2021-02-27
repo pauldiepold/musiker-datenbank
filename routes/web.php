@@ -3,7 +3,7 @@
 use Illuminate\Foundation\Application;
 use Illuminate\Support\Facades\Route;
 use Inertia\Inertia;
-use App\Http\Controllers\TestController;
+use App\Http\Controllers\PieceController;
 
 /*
 |--------------------------------------------------------------------------
@@ -16,7 +16,7 @@ use App\Http\Controllers\TestController;
 |
 */
 
-Route::get('/test' ,[TestController::class, 'test']);
+Route::resource('/pieces', PieceController::class);
 
 Route::get('/', function () {
     return Inertia::render('Welcome', [

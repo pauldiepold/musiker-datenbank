@@ -6,15 +6,13 @@ use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\SoftDeletes;
 
-class Piece extends Model
+class Composer extends Model
 {
     use HasFactory;
     use SoftDeletes;
 
-    protected $guarded = [];
-
-    public function composer()
+    public function pieces()
     {
-        return $this->belongsTo(Composer::class);
+        return $this->hasMany(Piece::class);
     }
 }

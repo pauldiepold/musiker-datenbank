@@ -7,7 +7,7 @@ use Illuminate\Foundation\Testing\RefreshDatabase;
 use Laravel\Jetstream\Features;
 use Tests\TestCase;
 
-class CreateApiTokenTest extends TestCase
+/*class CreateApiTokenTest extends TestCase
 {
     use RefreshDatabase;
 
@@ -32,4 +32,4 @@ class CreateApiTokenTest extends TestCase
         $this->assertTrue($user->fresh()->tokens->first()->can('read'));
         $this->assertFalse($user->fresh()->tokens->first()->can('delete'));
     }
-}
+}*/

@@ -8,7 +8,7 @@ use Illuminate\Support\Str;
 use Laravel\Jetstream\Features;
 use Tests\TestCase;
 
-class DeleteApiTokenTest extends TestCase
+/*class DeleteApiTokenTest extends TestCase
 {
     use RefreshDatabase;
 
@@ -30,4 +30,4 @@ class DeleteApiTokenTest extends TestCase
 
         $this->assertCount(0, $user->fresh()->tokens);
     }
-}
+}*/
