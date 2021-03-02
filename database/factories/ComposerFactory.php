@@ -22,6 +22,7 @@ class ComposerFactory extends Factory
     public function definition()
     {
         return [
+            'surname' => $this->faker->name,
             'name' => $this->faker->name,
             'genre' => $this->faker->colorName,
             'year_of_birth' => $this->faker->year,

@@ -15,7 +15,7 @@ class PieceController extends Controller
             'composer_id' => ['required', 'exists:composers,id'],
         ]);
 
-        Piece::create($validated);
+        $piece = Piece::create($validated);
 
         return back(303);
     }

@@ -15,6 +15,7 @@ class CreateComposersTable extends Migration
     {
         Schema::create('composers', function (Blueprint $table) {
             $table->id();
+            $table->string('surname');
             $table->string('name');
             $table->string('genre');
             $table->string('year_of_birth')->nullable();

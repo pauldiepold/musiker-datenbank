@@ -15,8 +15,11 @@ class CreatePiecesTable extends Migration
     {
         Schema::create('pieces', function (Blueprint $table) {
             $table->id();
+
             $table->string('name')->nullable();
+
             $table->foreignId('composer_id')->constrained();
+
             $table->timestamps();
             $table->softDeletes();
         });
